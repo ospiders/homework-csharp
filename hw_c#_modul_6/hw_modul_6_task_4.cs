@@ -1,10 +1,3 @@
-/*«адание 4
-—оздать абстрактный базовый класс Worker (работника) 
-с методом Print(). —оздайте четыре производных класса: 
-President, Security, Manager, Engineer. ѕереопределите метод
-Print() дл€ вывода информации, соответствующей 
-каждому типу работника*/
-
 using static System.Console;
 
 namespace charp
