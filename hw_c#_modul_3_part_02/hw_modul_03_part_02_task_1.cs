@@ -1,4 +1,4 @@
-using static System.Console;
+п»їusing static System.Console;
 using static Calculator;
 
 namespace charp
@@ -10,24 +10,24 @@ namespace charp
             short choice;
             do
             {
-                Write("Выберите направление перевода системы исчисления\n\n" +
-                      "1 - Из десятичной в двоичную.\n" +
-                      "2 - Из двоичной в десятичную.\n" +
-                      "0 - Выход.\n> ");
+                Write("Р’С‹Р±РµСЂРёС‚Рµ РЅР°РїСЂР°РІР»РµРЅРёРµ РїРµСЂРµРІРѕРґР° СЃРёСЃС‚РµРјС‹ РёСЃС‡РёСЃР»РµРЅРёСЏ\n\n" +
+                      "1 - РР· РґРµСЃСЏС‚РёС‡РЅРѕР№ РІ РґРІРѕРёС‡РЅСѓСЋ.\n" +
+                      "2 - РР· РґРІРѕРёС‡РЅРѕР№ РІ РґРµСЃСЏС‚РёС‡РЅСѓСЋ.\n" +
+                      "0 - Р’С‹С…РѕРґ.\n> ");
                 choice = short.Parse(ReadLine() ?? "0");
 
                 switch (choice)
                 {
                     case 0:
-                        WriteLine("Выход");
+                        WriteLine("Р’С‹С…РѕРґ");
                         break;
                     case 1:
-                        WriteLine("Вы выбрали перевод числа из десятичной системы счисления в бинарную\n");
-                        WriteLine($"Результат - {FromDecToBin()}\n");
+                        WriteLine("Р’С‹ РІС‹Р±СЂР°Р»Рё РїРµСЂРµРІРѕРґ С‡РёСЃР»Р° РёР· РґРµСЃСЏС‚РёС‡РЅРѕР№ СЃРёСЃС‚РµРјС‹ СЃС‡РёСЃР»РµРЅРёСЏ РІ Р±РёРЅР°СЂРЅСѓСЋ\n");
+                        WriteLine($"Р РµР·СѓР»СЊС‚Р°С‚ - {FromDecToBin()}\n");
                         break;
                     case 2:
-                        WriteLine("Вы выбрали перевод числа из бинарной системы счисления в десятичную\n");
-                        WriteLine($"Результат - {FromBinToDec()}\n");
+                        WriteLine("Р’С‹ РІС‹Р±СЂР°Р»Рё РїРµСЂРµРІРѕРґ С‡РёСЃР»Р° РёР· Р±РёРЅР°СЂРЅРѕР№ СЃРёСЃС‚РµРјС‹ СЃС‡РёСЃР»РµРЅРёСЏ РІ РґРµСЃСЏС‚РёС‡РЅСѓСЋ\n");
+                        WriteLine($"Р РµР·СѓР»СЊС‚Р°С‚ - {FromBinToDec()}\n");
                         break;
                 }
             } while (choice != 0);
@@ -43,12 +43,12 @@ namespace charp
     }
 }
 
-// Задание 1
+// Р—Р°РґР°РЅРёРµ 1
 class Calculator
 {
     public static string FromDecToBin()
     {
-        Write("Введите число десятичной системы счисления:\n> ");
+        Write("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ РґРµСЃСЏС‚РёС‡РЅРѕР№ СЃРёСЃС‚РµРјС‹ СЃС‡РёСЃР»РµРЅРёСЏ:\n> ");
         int input_dec_num = int.Parse(ReadLine() ?? "0");
 
         return Convert.ToString(input_dec_num, 2);
@@ -56,7 +56,7 @@ class Calculator
 
     public static int FromBinToDec()
     {
-        Write("Введите число двоичной системы счисления:\n> ");
+        Write("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ РґРІРѕРёС‡РЅРѕР№ СЃРёСЃС‚РµРјС‹ СЃС‡РёСЃР»РµРЅРёСЏ:\n> ");
         string input_bin_num = ReadLine() ?? "0";
 
         int result = 0;
@@ -64,13 +64,13 @@ class Calculator
         foreach (string str in input_bin_num.Split(' '))
         {
             if (str.Length > 8)
-                throw new Exception("Выход за пределы двоичного числа");
+                throw new Exception("Р’С‹С…РѕРґ Р·Р° РїСЂРµРґРµР»С‹ РґРІРѕРёС‡РЅРѕРіРѕ С‡РёСЃР»Р°");
 
             result += Convert.ToInt32(str, 2);
         }
 
         if (result > Int32.MaxValue)
-            throw new Exception("Выход за пределы int");
+            throw new Exception("Р’С‹С…РѕРґ Р·Р° РїСЂРµРґРµР»С‹ int");
 
         return result;
     }

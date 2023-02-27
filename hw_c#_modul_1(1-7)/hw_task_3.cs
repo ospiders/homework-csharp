@@ -1,4 +1,4 @@
-using static System.Console;
+п»їusing static System.Console;
 
 namespace Task3
 {
@@ -11,17 +11,17 @@ namespace Task3
             {
                 try
                 {
-                    WriteLine("Введите число: ");
+                    WriteLine("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
                     input_number = int.Parse(ReadLine() ?? string.Empty);
                 }
                 catch (FormatException)
                 {
-                    WriteLine("Неверный формат");
+                    WriteLine("РќРµРІРµСЂРЅС‹Р№ С„РѕСЂРјР°С‚");
                 }
 
             } while (input_number == 0 || input_number > 9999);
 
-            WriteLine("Результат: " + input_number);
+            WriteLine("Р РµР·СѓР»СЊС‚Р°С‚: " + input_number);
 
             return;
         }

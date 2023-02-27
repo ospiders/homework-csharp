@@ -1,4 +1,4 @@
-using static System.Console;
+ï»¿using static System.Console;
 
 namespace charp
 {
@@ -18,11 +18,11 @@ namespace charp
 
     abstract class Worker { public abstract void Print(); }
 
-    class President : Worker { public override void Print() => WriteLine("Ïðåçèäåíò"); }
+    class President : Worker { public override void Print() => WriteLine("ÐŸÑ€ÐµÐ·Ð¸Ð´ÐµÐ½Ñ‚"); }
 
-    class Security : Worker { public override void Print() => WriteLine("Îõðàííèê"); }
+    class Security : Worker { public override void Print() => WriteLine("ÐžÑ…Ñ€Ð°Ð½Ð½Ð¸Ðº"); }
 
-    class Manager : Worker { public override void Print() => WriteLine("Ìåíåäæåð"); }
+    class Manager : Worker { public override void Print() => WriteLine("ÐœÐµÐ½ÐµÐ´Ð¶ÐµÑ€"); }
 
-    class Engineer : Worker { public override void Print() => WriteLine("Èíæåíåð"); }
+    class Engineer : Worker { public override void Print() => WriteLine("Ð˜Ð½Ð¶ÐµÐ½ÐµÑ€"); }
 }

@@ -1,4 +1,4 @@
-using static System.Console;
+Ôªøusing static System.Console;
 
 class Program
 {
@@ -61,6 +61,6 @@ class Product : Money
     }
     public override string ToString()
     {
-        return $"÷ÂÌ‡ {base.ToString()}";
+        return $"–¶–µ–Ω–∞ {base.ToString()}";
     }
 }

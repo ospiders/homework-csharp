@@ -1,4 +1,4 @@
-using static System.Console;
+п»їusing static System.Console;
 
 namespace Task5
 {
@@ -8,7 +8,7 @@ namespace Task5
         {
             DateTime dt;
 
-            WriteLine("Введите дату(dd.mm.yyyy): ");
+            WriteLine("Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ(dd.mm.yyyy): ");
             dt = DateTime.Parse(ReadLine() ?? string.Empty);
             
             if (dt.Month < 3 || dt.Month == 12)

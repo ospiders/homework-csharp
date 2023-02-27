@@ -1,4 +1,4 @@
-using static System.Console;
+п»їusing static System.Console;
 
 class Program
 {
@@ -20,15 +20,15 @@ class Program
         //    journal2 += 6;
         //    //journal2 -= 12;
 
-        //    WriteLine("Кол-во персонала " + journal.PersonsCount);
+        //    WriteLine("РљРѕР»-РІРѕ РїРµСЂСЃРѕРЅР°Р»Р° " + journal.PersonsCount);
         //    WriteLine(journal.Equals(journal2));
 
-        //    WriteLine("Площадь магазина " + store1.StoreSquare);
+        //    WriteLine("РџР»РѕС‰Р°РґСЊ РјР°РіР°Р·РёРЅР° " + store1.StoreSquare);
         //    WriteLine(store1.Equals(store1));
         //}
         //catch(Exception err)
         //{
-        //    WriteLine($"Ошибка: { err.Message}!");
+        //    WriteLine($"РћС€РёР±РєР°: { err.Message}!");
         //}
 
         Library library = new();
@@ -62,27 +62,27 @@ class Store
 
     public string? StoreName
     {
-        get { return _store_name ?? "Не задано"; }
+        get { return _store_name ?? "РќРµ Р·Р°РґР°РЅРѕ"; }
         set { _store_name = value; }
     }
     public string? StoreAdress
     {
-        get { return _store_adress ?? "Не задано"; }
+        get { return _store_adress ?? "РќРµ Р·Р°РґР°РЅРѕ"; }
         set { _store_adress = value; }
     }
     public string? StoreProfile
     {
-        get { return _store_profile ?? "Не задано"; }
+        get { return _store_profile ?? "РќРµ Р·Р°РґР°РЅРѕ"; }
         set { _store_profile = value; }
     }
     public string? StorePhone
     {
-        get { return _store_phone ?? "Не задано"; }
+        get { return _store_phone ?? "РќРµ Р·Р°РґР°РЅРѕ"; }
         set { _store_phone = value; }
     }
     public string? StoreMail
     {
-        get { return _store_mail ?? "Не задано"; }
+        get { return _store_mail ?? "РќРµ Р·Р°РґР°РЅРѕ"; }
         set { _store_mail = value; }
     }
     public int StoreSquare
@@ -92,25 +92,25 @@ class Store
         {
             if (value > 0) _store_square = value;
             else
-                throw new Exception("Значение площади магазина отрицательное!");
+                throw new Exception("Р—РЅР°С‡РµРЅРёРµ РїР»РѕС‰Р°РґРё РјР°РіР°Р·РёРЅР° РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕРµ!");
         }
     }
 
     public void Read()
     {
-        Write("Введите название магазина: ");
+        Write("Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ РјР°РіР°Р·РёРЅР°: ");
         StoreName = ReadLine();
 
-        Write("Введите адрес магазина: ");
+        Write("Р’РІРµРґРёС‚Рµ Р°РґСЂРµСЃ РјР°РіР°Р·РёРЅР°: ");
         StoreAdress = ReadLine();
 
-        Write("Введите профиль магазина: ");
+        Write("Р’РІРµРґРёС‚Рµ РїСЂРѕС„РёР»СЊ РјР°РіР°Р·РёРЅР°: ");
         StoreProfile = ReadLine();
 
-        Write("Введите телефонный номер магазина: ");
+        Write("Р’РІРµРґРёС‚Рµ С‚РµР»РµС„РѕРЅРЅС‹Р№ РЅРѕРјРµСЂ РјР°РіР°Р·РёРЅР°: ");
         StorePhone = ReadLine();
 
-        Write("Введите email магазина: ");
+        Write("Р’РІРµРґРёС‚Рµ email РјР°РіР°Р·РёРЅР°: ");
         StoreMail = ReadLine();
 
         WriteLine();
@@ -118,11 +118,11 @@ class Store
     public void Print()
     {
         WriteLine(
-            "Название магазина: {0}\n" +
-            "Адрес магазина: {1}\n" +
-            "Профиль магазина: {2}\n" +
-            "Телефонный номер магазина: {3}\n" +
-            "Email магазина: {4}\n",
+            "РќР°Р·РІР°РЅРёРµ РјР°РіР°Р·РёРЅР°: {0}\n" +
+            "РђРґСЂРµСЃ РјР°РіР°Р·РёРЅР°: {1}\n" +
+            "РџСЂРѕС„РёР»СЊ РјР°РіР°Р·РёРЅР°: {2}\n" +
+            "РўРµР»РµС„РѕРЅРЅС‹Р№ РЅРѕРјРµСЂ РјР°РіР°Р·РёРЅР°: {3}\n" +
+            "Email РјР°РіР°Р·РёРЅР°: {4}\n",
             StoreName, StoreAdress, StoreProfile, StorePhone, StoreMail);
     }
 

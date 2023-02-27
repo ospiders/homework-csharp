@@ -1,4 +1,4 @@
-using static System.Console;
+п»їusing static System.Console;
 
 namespace Task4
 {
@@ -13,34 +13,34 @@ namespace Task4
             {
                 try
                 {
-                    WriteLine("Введите число: ");
+                    WriteLine("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
                     input_number = int.Parse(ReadLine() ?? string.Empty);
                     if (input_number > 999999)
-                        throw new Exception("Введено больше 6 цифр");
+                        throw new Exception("Р’РІРµРґРµРЅРѕ Р±РѕР»СЊС€Рµ 6 С†РёС„СЂ");
 
-                    WriteLine("Введите первый номер разряда числа: ");
+                    WriteLine("Р’РІРµРґРёС‚Рµ РїРµСЂРІС‹Р№ РЅРѕРјРµСЂ СЂР°Р·СЂВ¤РґР° С‡РёСЃР»Р°: ");
                     iterator_start = int.Parse(ReadLine() ?? string.Empty);
                     if (input_number.ToString().Length < iterator_start || iterator_start < 1)
                     {
                         iterator_start = 0;
-                        throw new Exception("Введено число меньше 1 или больше введенного числа");
+                        throw new Exception("Р’РІРµРґРµРЅРѕ С‡РёСЃР»Рѕ РјРµРЅСЊС€Рµ 1 РёР»Рё Р±РѕР»СЊС€Рµ РІРІРµРґРµРЅРЅРѕРіРѕ С‡РёСЃР»Р°");
                     }
 
-                    WriteLine("Введите второй номер разряда числа: ");
+                    WriteLine("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕР№ РЅРѕРјРµСЂ СЂР°Р·СЂВ¤РґР° С‡РёСЃР»Р°: ");
                     iterator_end = int.Parse(ReadLine() ?? string.Empty);
                     if (input_number.ToString().Length < iterator_end || iterator_end < 1)
                     {
                         iterator_end = 0;
-                        throw new Exception("Введено число меньше 1 или больше введенного числа");
+                        throw new Exception("Р’РІРµРґРµРЅРѕ С‡РёСЃР»Рѕ РјРµРЅСЊС€Рµ 1 РёР»Рё Р±РѕР»СЊС€Рµ РІРІРµРґРµРЅРЅРѕРіРѕ С‡РёСЃР»Р°");
                     }
                 }
                 catch (FormatException)
                 {
-                    WriteLine("Неверный формат");
+                    WriteLine("РќРµРІРµСЂРЅС‹Р№ С„РѕСЂРјР°С‚");
                 }
                 catch (Exception err)
                 {
-                    WriteLine($"Ошибка: {err.Message}");
+                    WriteLine($"РћС€РёР±РєР°: {err.Message}");
                 }
 
             } while (input_number == 0 || iterator_start == 0 || iterator_end == 0);
@@ -52,7 +52,7 @@ namespace Task4
             temp[iterator_start - 1] = temp[iterator_end - 1];
             temp[iterator_end - 1] = buf;
 
-            WriteLine("Результат: ");
+            WriteLine("Р РµР·СѓР»СЊС‚Р°С‚: ");
             foreach (char c in temp)
                 Write(c);
 

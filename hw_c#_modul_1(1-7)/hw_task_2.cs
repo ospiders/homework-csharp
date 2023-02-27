@@ -1,4 +1,4 @@
-using static System.Console;
+п»їusing static System.Console;
 
 namespace Task2
 {
@@ -12,19 +12,19 @@ namespace Task2
             {
                 try
                 {
-                    WriteLine("Введите число: ");
+                    WriteLine("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
                     input_number = double.Parse(ReadLine() ?? string.Empty);
-                    WriteLine("Введите процент: ");
+                    WriteLine("Р’РІРµРґРёС‚Рµ РїСЂРѕС†РµРЅС‚: ");
                     input_percent = double.Parse(ReadLine() ?? string.Empty);
                 }
                 catch (FormatException)
                 {
-                    WriteLine("Неверный формат");
+                    WriteLine("РќРµРІРµСЂРЅС‹Р№ С„РѕСЂРјР°С‚");
                 }
 
             } while (input_number == 0 || input_percent == 0);
             
-            WriteLine("Результат: " + (input_number * input_percent / 100).ToString());
+            WriteLine("Р РµР·СѓР»СЊС‚Р°С‚: " + (input_number * input_percent / 100).ToString());
 
             return;
         }

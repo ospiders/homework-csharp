@@ -1,4 +1,4 @@
-using static System.Console;
+п»їusing static System.Console;
 
 class Program
 {
@@ -40,7 +40,7 @@ class Library
 
                 return data;
             }
-            throw new Exception("Библеотека пуста");
+            throw new Exception("Р‘РёР±Р»РµРѕС‚РµРєР° РїСѓСЃС‚Р°");
         }
         set
         {
@@ -56,7 +56,7 @@ class Library
     public static Library operator -(Library obj, string deletebook)
     {
         if (obj._list_of_books == null)
-            throw new Exception("Библеотека пуста");
+            throw new Exception("Р‘РёР±Р»РµРѕС‚РµРєР° РїСѓСЃС‚Р°");
 
         if (obj._list_of_books.Contains(deletebook))
         {
@@ -64,7 +64,7 @@ class Library
             return obj;
         }
 
-        throw new Exception("Книга не найдена");
+        throw new Exception("РљРЅРёРіР° РЅРµ РЅР°Р№РґРµРЅР°");
     }
     public static bool operator ==(Library obj1, string bookname)
     {

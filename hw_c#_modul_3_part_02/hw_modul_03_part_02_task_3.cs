@@ -1,4 +1,4 @@
-using System.Text.RegularExpressions;
+п»їusing System.Text.RegularExpressions;
 using static System.Console;
 
 namespace charp
@@ -11,11 +11,11 @@ namespace charp
 
             try
             {
-                Write("Введите фамилию: "); travel_passport.Lastname = ReadLine() ?? "Noname";
-                Write("Введите имя: "); travel_passport.Name = ReadLine() ?? "Noname";
-                Write("Введите отчество: "); travel_passport.Patromymic = ReadLine() ?? "Noname";
-                Write("Введите номер паспорта: "); travel_passport.PassportNumber = ReadLine() ?? "RandomNumber";
-                Write("Введите дату рождения: "); travel_passport.DateOfIssue = ReadLine() ?? "RandomData";
+                Write("Р’РІРµРґРёС‚Рµ С„Р°РјРёР»РёСЋ: "); travel_passport.Lastname = ReadLine() ?? "Noname";
+                Write("Р’РІРµРґРёС‚Рµ РёРјСЏ: "); travel_passport.Name = ReadLine() ?? "Noname";
+                Write("Р’РІРµРґРёС‚Рµ РѕС‚С‡РµСЃС‚РІРѕ: "); travel_passport.Patromymic = ReadLine() ?? "Noname";
+                Write("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РїР°СЃРїРѕСЂС‚Р°: "); travel_passport.PassportNumber = ReadLine() ?? "RandomNumber";
+                Write("Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ СЂРѕР¶РґРµРЅРёСЏ: "); travel_passport.DateOfIssue = ReadLine() ?? "RandomData";
             }
             catch (Exception e) { WriteLine(e.Message); }
 
@@ -36,8 +36,8 @@ class TravelPassport
     {
         get
         {
-            return $"Имя: {_name}\nФамилия: {_lastname}\nОтчество: {_patronymic}\n" +
-                                      $"Номер пасспорта: {_passport_number}\nДата выдачи: {_date_of_issue}\n";
+            return $"РРјСЏ: {_name}\nР¤Р°РјРёР»РёСЏ: {_lastname}\nРћС‚С‡РµСЃС‚РІРѕ: {_patronymic}\n" +
+                                      $"РќРѕРјРµСЂ РїР°СЃСЃРїРѕСЂС‚Р°: {_passport_number}\nР”Р°С‚Р° РІС‹РґР°С‡Рё: {_date_of_issue}\n";
         }
     }
     public string Name
@@ -45,13 +45,13 @@ class TravelPassport
         get { return _name; }
         set
         {
-            if (Regex.IsMatch(value, "^[а-яА-Я]*?$"))
+            if (Regex.IsMatch(value, "^[Р°-СЏРђ-РЇ]*?$"))
             {
                 _name = value;
                 return;
             }
 
-            throw new Exception("Строка содержит недопустимые символы");
+            throw new Exception("РЎС‚СЂРѕРєР° СЃРѕРґРµСЂР¶РёС‚ РЅРµРґРѕРїСѓСЃС‚РёРјС‹Рµ СЃРёРјРІРѕР»С‹");
         }
     }
     public string Lastname
@@ -59,13 +59,13 @@ class TravelPassport
         get { return _lastname; }
         set
         {
-            if (Regex.IsMatch(value, "^[а-яА-Я]*?$"))
+            if (Regex.IsMatch(value, "^[Р°-СЏРђ-РЇ]*?$"))
             {
                 _lastname = value;
                 return;
             }
 
-            throw new Exception("Строка содержит недопустимые символы");
+            throw new Exception("РЎС‚СЂРѕРєР° СЃРѕРґРµСЂР¶РёС‚ РЅРµРґРѕРїСѓСЃС‚РёРјС‹Рµ СЃРёРјРІРѕР»С‹");
         }
     }
     public string Patromymic
@@ -73,13 +73,13 @@ class TravelPassport
         get { return _patronymic; }
         set
         {
-            if (Regex.IsMatch(value, "^[а-яА-Я]*?$"))
+            if (Regex.IsMatch(value, "^[Р°-СЏРђ-РЇ]*?$"))
             {
                 _patronymic = value;
                 return;
             }
 
-            throw new Exception("Строка содержит недопустимые символы");
+            throw new Exception("РЎС‚СЂРѕРєР° СЃРѕРґРµСЂР¶РёС‚ РЅРµРґРѕРїСѓСЃС‚РёРјС‹Рµ СЃРёРјРІРѕР»С‹");
         }
     }
     public string PassportNumber
@@ -93,7 +93,7 @@ class TravelPassport
                 return;
             }
 
-            throw new Exception("Строка содержит недопустимые символы");
+            throw new Exception("РЎС‚СЂРѕРєР° СЃРѕРґРµСЂР¶РёС‚ РЅРµРґРѕРїСѓСЃС‚РёРјС‹Рµ СЃРёРјРІРѕР»С‹");
         }
     }
     public string DateOfIssue
@@ -107,7 +107,7 @@ class TravelPassport
                 return;
             }
 
-            throw new Exception("Строка содержит недопустимые символы");
+            throw new Exception("РЎС‚СЂРѕРєР° СЃРѕРґРµСЂР¶РёС‚ РЅРµРґРѕРїСѓСЃС‚РёРјС‹Рµ СЃРёРјРІРѕР»С‹");
         }
     }
 }

@@ -1,4 +1,4 @@
-using static System.Console;
+Ôªøusing static System.Console;
 
 namespace charp
 {
@@ -15,7 +15,7 @@ namespace charp
             }
             else
             {
-                throw new Exception("Õ≈“” Œœ≈–¿“Œ–¿");
+                throw new Exception("–ù–ï–¢–£ –û–ü–ï–†–ê–¢–û–†–ê");
             }
 
             int l_operand = int.Parse(operands[0]);

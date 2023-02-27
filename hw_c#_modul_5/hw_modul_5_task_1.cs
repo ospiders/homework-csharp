@@ -1,4 +1,4 @@
-using static System.Console;
+п»їusing static System.Console;
 
 class Program
 {
@@ -13,13 +13,13 @@ class Program
             journal2 += 6;
             //journal2 -= 12;
 
-            WriteLine("Кол-во персонала " + journal.PersonsCount);
+            WriteLine("РљРѕР»-РІРѕ РїРµСЂСЃРѕРЅР°Р»Р° " + journal.PersonsCount);
             WriteLine(journal.Equals(journal2));
 
         }
         catch (Exception err)
         {
-            WriteLine($"Ошибка: {err.Message}!");
+            WriteLine($"РћС€РёР±РєР°: {err.Message}!");
         }
     }
 }
@@ -35,7 +35,7 @@ class Journal
 
     public string? JournalName
     {
-        get { return _journal_name ?? "Не задано"; }
+        get { return _journal_name ?? "РќРµ Р·Р°РґР°РЅРѕ"; }
         set { _journal_name = value; }
     }
     public int? JournalYear
@@ -49,17 +49,17 @@ class Journal
     }
     public string? JournalDescription
     {
-        get { return _journal_description ?? "Не задано"; }
+        get { return _journal_description ?? "РќРµ Р·Р°РґР°РЅРѕ"; }
         set { _journal_description = value; }
     }
     public string? JournalPhone
     {
-        get { return _journal_phone ?? "Не задано"; }
+        get { return _journal_phone ?? "РќРµ Р·Р°РґР°РЅРѕ"; }
         set { _journal_phone = value; }
     }
     public string? JournalMail
     {
-        get { return _journal_mail ?? "Не задано"; }
+        get { return _journal_mail ?? "РќРµ Р·Р°РґР°РЅРѕ"; }
         set { _journal_mail = value; }
     }
     public int PersonsCount
@@ -69,25 +69,25 @@ class Journal
         {
             if (value > 0) _persons_count = value;
             else
-                throw new Exception("Отрицательное значение количества сотрудников");
+                throw new Exception("РћС‚СЂРёС†Р°С‚РµР»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ");
         }
     }
 
     public void Read()
     {
-        Write("Введите название журнала: ");
+        Write("Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ Р¶СѓСЂРЅР°Р»Р°: ");
         JournalName = ReadLine();
 
-        Write("Введите год основания журнала: ");
+        Write("Р’РІРµРґРёС‚Рµ РіРѕРґ РѕСЃРЅРѕРІР°РЅРёСЏ Р¶СѓСЂРЅР°Р»Р°: ");
         JournalYear = int.Parse(ReadLine() ?? "0");
 
-        Write("Введите описание журнала: ");
+        Write("Р’РІРµРґРёС‚Рµ РѕРїРёСЃР°РЅРёРµ Р¶СѓСЂРЅР°Р»Р°: ");
         JournalDescription = ReadLine();
 
-        Write("Введите телефонный номер журнала: ");
+        Write("Р’РІРµРґРёС‚Рµ С‚РµР»РµС„РѕРЅРЅС‹Р№ РЅРѕРјРµСЂ Р¶СѓСЂРЅР°Р»Р°: ");
         JournalPhone = ReadLine();
 
-        Write("Введите email журнала: ");
+        Write("Р’РІРµРґРёС‚Рµ email Р¶СѓСЂРЅР°Р»Р°: ");
         JournalMail = ReadLine();
 
         WriteLine();
@@ -95,11 +95,11 @@ class Journal
     public void Print()
     {
         WriteLine(
-            "Название журнала: {0}\n" +
-            "Год основания журнала: {1}\n" +
-            "Описание журнала: {2}\n" +
-            "Телефонный номер журнала: {3}\n" +
-            "Email журнала: {4}\n",
+            "РќР°Р·РІР°РЅРёРµ Р¶СѓСЂРЅР°Р»Р°: {0}\n" +
+            "Р“РѕРґ РѕСЃРЅРѕРІР°РЅРёСЏ Р¶СѓСЂРЅР°Р»Р°: {1}\n" +
+            "РћРїРёСЃР°РЅРёРµ Р¶СѓСЂРЅР°Р»Р°: {2}\n" +
+            "РўРµР»РµС„РѕРЅРЅС‹Р№ РЅРѕРјРµСЂ Р¶СѓСЂРЅР°Р»Р°: {3}\n" +
+            "Email Р¶СѓСЂРЅР°Р»Р°: {4}\n",
             JournalName, JournalYear, JournalDescription, JournalPhone, JournalMail);
     }
 
